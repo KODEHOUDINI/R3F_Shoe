@@ -7,7 +7,7 @@ import "./styles.css";
 export default function App() {
   const { color } = useControls({ color: "#b78135" });
   return (
-    <div className="container" style={{ background: color }}>
+    <div className="container">
       <Canvas shadows camera={{ position: [4, 0, -12], fov: 35 }}>
         <Stage
           intensity={1}
@@ -15,7 +15,7 @@ export default function App() {
           shadows={{ type: "accumulative", color, colorBlend: 2, opacity: 2 }}
           adjustCamera={0.9}
         >
-          <Model color={color} />
+          <Model />
         </Stage>
         <OrbitControls
           makeDefault
